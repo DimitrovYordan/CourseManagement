@@ -6,25 +6,23 @@ It is built with **C# (.NET 8)**, **Entity Framework Core**, and **Microsoft SQL
 ---
 
 ## 🧩 Technologies Used
-
-- **Backend Framework:** ASP.NET Core Web API (.NET 8 / .NET 9 ready)  
-- **Database:** Microsoft SQL Server  
-- **ORM:** Entity Framework Core  
-- **API Documentation:** Swagger (Swashbuckle.AspNetCore)  
-- **Testing:** xUnit, Moq, EF Core InMemory  
-- **Dependency Injection:** Built-in .NET DI Container  
+- **Backend Framework:** ASP.NET Core Web API (.NET 8 / .NET 9 ready)
+- **Database:** Microsoft SQL Server
+- **ORM:** Entity Framework Core
+- **API Documentation:** Swagger (Swashbuckle.AspNetCore)
+- **Testing:** xUnit, Moq, EF Core InMemory
+- **Dependency Injection:** Built-in .NET DI Container
 
 ---
 
 ## ⚙️ Features
-
-- Full CRUD operations for **Courses** and **Students**  
-- Student **Enrollment** with capacity validation  
-- **Progress tracking** with Strategy Pattern implementation  
-- **Automatic course completion** when progress reaches 100%  
-- **Centralized error handling** with custom exceptions  
-- **Swagger UI** for API exploration and testing  
-- **Unit tests** for all main service layers  
+- Full CRUD operations for **Courses** and **Students**
+- **Student Enrollment** with course capacity validation
+- **Progress tracking** using the Strategy design pattern
+- **Automatic completion** when progress reaches 100%
+- Centralized **error handling** with custom exceptions
+- **Swagger UI** for API exploration and testing
+- **Unit tests** for all main service layers
 
 ---
 
@@ -34,24 +32,32 @@ It is built with **C# (.NET 8)**, **Entity Framework Core**, and **Microsoft SQL
 ```bash
 git clone https://github.com/DimitrovYordan/CourseManagement.git
 cd CourseManagement
+2️⃣ Configure the database
+Edit the connection string in appsettings.json:
 
-### 2️⃣ Configure the database
+json
+Copy code
 "ConnectionStrings": {
   "DefaultConnection": "Server=YOUR_SERVER_NAME;Database=CourseManagementDB;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True"
 }
-
-### 3️⃣ Apply migrations and create the database
+3️⃣ Apply migrations and create the database
+bash
+Copy code
 dotnet ef database update
-
-### 4️⃣ Run the application
+4️⃣ Run the application
+bash
+Copy code
 dotnet run
+5️⃣ Open Swagger
+Open your browser and navigate to:
+👉 https://localhost:5001/swagger
 
-### 5️⃣ Open Swagger
-https://localhost:5001/swagger
+🧪 Running Unit Tests
+Run all unit tests using:
 
-### 🧪 Running Unit Tests
+bash
+Copy code
 dotnet test
-
 📘 API Endpoints Overview
 HTTP Method	Endpoint	Description
 GET	/api/Courses	Get all courses
@@ -61,5 +67,3 @@ POST	/api/Students	Register a new student
 POST	/api/Enrollments	Enroll a student in a course
 PUT	/api/Enrollments/{id}	Update enrollment progress
 GET	/api/Enrollments/student/{id}	Get all enrollments for a student
-git clone https://github.com/DimitrovYordan/CourseManagement.git
-cd CourseManagement
