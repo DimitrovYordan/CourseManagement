@@ -1,0 +1,31 @@
+﻿# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Dd]ebug*/
+[Rr]elease*/
+[Xx]64/
+[Xx]86/
+[Aa][Rr][Mm]*/
+[Aa][Rr][Mm]64/
+
+# ASP.NET / .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Database
+*.mdf
+*.ldf
+
+# Other
+*.dbmdl
+*.opendb
+*.vscode/
