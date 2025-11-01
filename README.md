@@ -32,32 +32,39 @@ It is built with **C# (.NET 8)**, **Entity Framework Core**, and **Microsoft SQL
 ```bash
 git clone https://github.com/DimitrovYordan/CourseManagement.git
 cd CourseManagement
-2️⃣ Configure the database
-Edit the connection string in appsettings.json:
 
-json
-Copy code
+
+### 2️⃣ Configure the database
+Edit the connection string in appsettings.json:
 "ConnectionStrings": {
   "DefaultConnection": "Server=YOUR_SERVER_NAME;Database=CourseManagementDB;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True"
 }
-3️⃣ Apply migrations and create the database
+
+
+### 3️⃣ Apply migrations and create the database
 bash
 Copy code
 dotnet ef database update
-4️⃣ Run the application
+
+
+### 4️⃣ Run the application
 bash
 Copy code
 dotnet run
-5️⃣ Open Swagger
+
+
+### 5️⃣ Open Swagger
 Open your browser and navigate to:
 👉 https://localhost:5001/swagger
 
+---
+
 🧪 Running Unit Tests
 Run all unit tests using:
-
-bash
-Copy code
 dotnet test
+
+---
+
 📘 API Endpoints Overview
 HTTP Method	Endpoint	Description
 GET	/api/Courses	Get all courses
